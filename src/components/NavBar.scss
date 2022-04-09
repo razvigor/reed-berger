@@ -1,0 +1,25 @@
+@use '../scss/variables';
+@use '../scss/mixins';
+
+.navbar {
+	height: 85px;
+	color: variables.$white-color;
+	background-color: variables.$primary-bcg;
+	@include mixins.flex(flex, center, center, 0 0);
+	ul {
+		@include mixins.flex(flex, center, center, 0 15px);
+		li {
+			a {
+				color: inherit;
+				font-weight: 600;
+				font-size: 1.2rem;
+				&:hover {
+					color: darken(variables.$white-color, 20%);
+				}
+				&.active {
+					color: darken(variables.$white-color, 20%);
+				}
+			}
+		}
+	}
+}
