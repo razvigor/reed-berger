@@ -5,6 +5,7 @@ import PostList from './components/PostList';
 import Post from './components/Post';
 import CreatePost from './components/CreatePost';
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
 function App() {
 	return (
@@ -16,6 +17,7 @@ function App() {
 				<Route path='/post:id' element={<Post />} />
 				<Route path='/create-post' element={<CreatePost />} />
 			</Routes>
+			<Footer />
 		</div>
 	);
 }

@@ -1,0 +1,12 @@
+@use '../scss/variables';
+@use '../scss/mixins';
+
+.footer {
+	background-color: variables.$primary-color;
+	height: 85px;
+	@include mixins.flex(flex, center, center, 0 0);
+	p {
+		color: variables.$white-color;
+		margin: 0;
+	}
+}

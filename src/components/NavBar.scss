@@ -11,8 +11,9 @@
 		li {
 			a {
 				color: inherit;
-				font-weight: 600;
+				font-weight: 500;
 				font-size: 1.2rem;
+				transition: color 0.3s;
 				&:hover {
 					color: darken(variables.$white-color, 20%);
 				}

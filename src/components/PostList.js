@@ -1,7 +1,12 @@
 import React from 'react';
+import Container from './Container';
 
 const PostList = () => {
-	return <div>PostList</div>;
+	return (
+		<Container>
+			<h1>Post List</h1>
+		</Container>
+	);
 };
 
 export default PostList;
