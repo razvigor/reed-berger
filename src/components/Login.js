@@ -4,9 +4,14 @@ import './Login.scss';
 
 const Login = ({ setUser }) => {
 	const [username, setUsername] = React.useState('');
+	const [message, setMessage] = React.useState('');
 	function handleSubmit(ev) {
 		ev.preventDefault();
-		setUser(username);
+		if (username) {
+			setUser(username);
+		} else {
+			setMessage('You must fill field username.');
+		}
 	}
 	return (
 		<Container>
@@ -22,6 +27,7 @@ const Login = ({ setUser }) => {
 							setUsername(ev.target.value);
 						}}
 					/>
+					<p>{message}</p>
 					<button type='submit'>Submit</button>
 				</form>
 			</div>

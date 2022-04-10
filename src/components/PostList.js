@@ -14,7 +14,9 @@ const PostList = () => {
 	}
 	return (
 		<Container>
-			<Header user={user} onclick={handleClick} />
+			<div className='content'>
+				<Header user={user} onclick={handleClick} />
+			</div>
 		</Container>
 	);
 };

@@ -8,12 +8,15 @@
 		display: flex;
 		flex-direction: column;
 		width: 350px;
-		row-gap: 35px;
+		row-gap: 15px;
 		input {
 			height: 42px;
 			padding: 0 0 0 10px;
 			border: 1px solid #ddd;
 			border-radius: 10px;
+		}
+		p {
+			margin: 0;
 		}
 		button {
 			cursor: pointer;

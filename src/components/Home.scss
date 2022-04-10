@@ -4,6 +4,9 @@
 .home {
 	@include mixins.flex(flex, center, center, 0 150px);
 	height: calc(100vh - 85px);
+	@media screen and (max-width: variables.$mobile) {
+		flex-direction: column;
+	}
 	#{&}__image {
 		min-width: 180px;
 		display: flex;

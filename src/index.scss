@@ -28,3 +28,10 @@ img {
 ::selection {
 	background-color: #ddd;
 }
+.content {
+	height: calc(100vh - 85px);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}

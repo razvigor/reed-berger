@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import './Menu.scss';
 
 const Menu = ({ active, setActive }) => {
 	function handleClick() {

@@ -3,6 +3,9 @@
 
 .title {
 	@include mixins.flex(flex, space-between, center, 0 0);
+	@media screen and (max-width: variables.$mobile) {
+		flex-direction: column;
+	}
 	button {
 		cursor: pointer;
 		border: 1px solid #ddd;

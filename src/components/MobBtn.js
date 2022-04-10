@@ -1,4 +1,5 @@
 import React from 'react';
+import './MobBtn.scss';
 
 const MobBtn = ({ active, setActive }) => {
 	function handleClick() {
