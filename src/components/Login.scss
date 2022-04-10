@@ -1,0 +1,33 @@
+@use '../scss/mixins';
+@use '../scss/variables';
+.login {
+	@include mixins.flex(flex, center, center, 0 0);
+	height: calc(100vh - 85px);
+	flex-direction: column;
+	form {
+		display: flex;
+		flex-direction: column;
+		width: 350px;
+		row-gap: 35px;
+		input {
+			height: 42px;
+			padding: 0 0 0 10px;
+			border: 1px solid #ddd;
+			border-radius: 10px;
+		}
+		button {
+			cursor: pointer;
+			height: 42px;
+			border: 1px solid #ddd;
+			border-radius: 10px;
+			background-color: variables.$primary-bcg;
+			font-size: 18px;
+			color: variables.$white-color;
+			transition: all 0.3s;
+			&:hover {
+				background-color: lighten(variables.$primary-bcg, 15%);
+				color: darken(variables.$white-color, 80%);
+			}
+		}
+	}
+}

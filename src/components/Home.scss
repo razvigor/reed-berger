@@ -1,0 +1,33 @@
+@use '../scss/variables';
+@use '../scss/mixins';
+
+.home {
+	@include mixins.flex(flex, center, center, 0 150px);
+	height: calc(100vh - 85px);
+	#{&}__image {
+		min-width: 180px;
+		display: flex;
+		flex-direction: column;
+		row-gap: 25px;
+		align-items: center;
+		img {
+			border-radius: 50%;
+		}
+		a {
+			background-color: variables.$primary-bcg;
+			color: variables.$white-color;
+			display: inline-block;
+			padding: 8px 15px;
+			border-radius: 5px;
+			transition: all 0.3s;
+			&:hover {
+				background-color: lighten(variables.$primary-bcg, 15%);
+				color: darken(variables.$white-color, 80%);
+			}
+		}
+	}
+}
+.loading {
+	height: calc(100vh - 170px);
+	@include mixins.flex(flex, center, center, 0 0);
+}

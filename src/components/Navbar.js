@@ -1,21 +1,15 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import Menu from './Menu';
+import MobBtn from './MobBtn';
+
 import './NavBar.scss';
 
 const Navbar = () => {
+	const [active, setActive] = React.useState(false);
 	return (
 		<nav className='navbar'>
-			<ul>
-				<li>
-					<NavLink to='/'>Home</NavLink>
-				</li>
-				<li>
-					<NavLink to='/post-list'>Post List</NavLink>
-				</li>
-				<li>
-					<NavLink to='/create-post'>Create Post</NavLink>
-				</li>
-			</ul>
+			<Menu active={active} setActive={setActive} />
+			<MobBtn active={active} setActive={setActive} />
 		</nav>
 	);
 };

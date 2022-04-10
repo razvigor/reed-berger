@@ -1,0 +1,20 @@
+@use '../scss/mixins';
+@use '../scss/variables';
+
+.title {
+	@include mixins.flex(flex, space-between, center, 0 0);
+	button {
+		cursor: pointer;
+		border: 1px solid #ddd;
+		border-radius: 10px;
+		background-color: variables.$primary-bcg;
+		font-size: 18px;
+		color: variables.$white-color;
+		padding: 8px 15px;
+		transition: all 0.3s;
+		&:hover {
+			background-color: lighten(variables.$primary-bcg, 15%);
+			color: darken(variables.$white-color, 80%);
+		}
+	}
+}

@@ -25,3 +25,6 @@ img {
 ::before {
 	box-sizing: border-box;
 }
+::selection {
+	background-color: #ddd;
+}
