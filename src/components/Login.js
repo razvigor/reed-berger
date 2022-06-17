@@ -1,14 +1,15 @@
 import React from 'react';
 import Container from './Container';
+import { UserContext } from '../App';
 import './Login.scss';
 
-const Login = ({ setUser }) => {
-	const [username, setUsername] = React.useState('');
+const Login = () => {
+	const [user, setUser] = React.useContext(UserContext);
 	const [message, setMessage] = React.useState('');
 	function handleSubmit(ev) {
 		ev.preventDefault();
-		if (username) {
-			setUser(username);
+		if (user) {
+			setUser(user);
 		} else {
 			setMessage('You must fill field username.');
 		}
@@ -22,9 +23,9 @@ const Login = ({ setUser }) => {
 						type='text'
 						name='name'
 						placeholder='Input username'
-						value={username}
+						value={user}
 						onChange={(ev) => {
-							setUsername(ev.target.value);
+							setUser(ev.target.value);
 						}}
 					/>
 					<p>{message}</p>

@@ -1,11 +1,12 @@
 import React from 'react';
-import Container from './Container';
 
-const Post = () => {
+const Post = ({ image, content, user }) => {
 	return (
-		<Container>
-			<h1>Post</h1>
-		</Container>
+		<div className='post'>
+			<img src={image} alt='Post' />
+			<p>{content}</p>
+			<p>{user}</p>
+		</div>
 	);
 };
 

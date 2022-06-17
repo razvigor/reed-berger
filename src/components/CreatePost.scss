@@ -1,20 +1,27 @@
-@use '../scss/mixins';
 @use '../scss/variables';
 
-.title {
-	@include mixins.flex(flex, space-between, center, 0 0);
-	width: 100%;
-	@media screen and (max-width: variables.$mobile) {
-		flex-direction: column;
+form {
+	width: 320px;
+	display: flex;
+	flex-direction: column;
+	padding: 15px;
+	border: 1px solid #ddd;
+	row-gap: 15px;
+	border-radius: 10px;
+	textarea {
+		height: 85px;
+		border: 1px solid #ddd;
+		border-radius: 10px;
+		padding: 10px;
 	}
 	button {
 		cursor: pointer;
+		height: 42px;
 		border: 1px solid #ddd;
 		border-radius: 10px;
 		background-color: variables.$primary-bcg;
 		font-size: 18px;
 		color: variables.$white-color;
-		padding: 8px 15px;
 		transition: all 0.3s;
 		&:hover {
 			background-color: lighten(variables.$primary-bcg, 15%);
